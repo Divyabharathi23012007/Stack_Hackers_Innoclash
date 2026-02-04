@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water Level Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <h2>💧 Groundwater Status</h2>
+    <p class="role">User: <span id="role"></span></p>
+
+    <!-- STATUS CARD -->
+    <div id="statusCard" class="card safe">
+        <h3 id="statusText">Checking...</h3>
+        <p id="statusDesc"></p>
+    </div>
+
+    <!-- GRAPH -->
+    <div class="card">
+        <canvas id="waterChart"></canvas>
+    </div>
+
+    <!-- ADVICE -->
+    <div class="card advice">
+        <h3>🌾 Farmer Advice</h3>
+        <p id="adviceText">Run prediction to see advice</p>
+    </div>
+
+    <!-- ACTION BUTTON -->
+    <button onclick="runPrediction()">🔍 Check My Water Status</button>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
